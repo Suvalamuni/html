@@ -29,8 +29,18 @@
     <p><strong>Email:</strong> contact@rlitechnosoft.com</p>
     <p><strong>Phone:</strong> +91-9876543210</p>
 
-    <!-- FORMSPREE WORKING FORM -->
-    <form action="https://formspree.io/f/mvglzbrj" method="POST" class="contact-form">
+    <!-- UNLIMITED FORM USING FORMSUBMIT.CO -->
+    <form action="https://formsubmit.co/suvalamuni@gmail.com" method="POST" class="contact-form">
+
+      <!-- Disable captcha -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- Redirect back to your contact page -->
+      <input type="hidden" name="_next" value="https://suvalamuni.github.io/html/contact.html">
+
+      <!-- Format email nicely -->
+      <input type="hidden" name="_template" value="table">
+
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Message" required></textarea>
@@ -53,7 +63,6 @@ header {
   background: #002b5b; color: white; padding: 15px 40px;
   display: flex; justify-content: space-between; align-items: center;
 }
-.logo { font-size: 1.5em; font-weight: bold; }
 nav ul { list-style: none; display: flex; gap: 20px; }
 nav a { color: white; text-decoration: none; font-weight: 500; }
 nav a:hover, .active { color: #00aaff; }
