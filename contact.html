@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RLI Technosoft | Contact</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
   <header>
     <div class="logo">
       <img src="RLI.jpeg" alt="RLI Technosoft Logo">
@@ -31,51 +29,20 @@
     <p><strong>Email:</strong> contact@rlitechnosoft.com</p>
     <p><strong>Phone:</strong> +91-9876543210</p>
 
-    <!-- FORM USING FORMSUBMIT WITH POPUP & REDIRECT -->
-    <form id="contactForm" class="contact-form">
-
-      <!-- Disable Captcha -->
-      <input type="hidden" name="_captcha" value="false">
-
-      <!-- Email Format -->
-      <input type="hidden" name="_template" value="table">
-
+    <!-- FORMSPREE WORKING FORM -->
+    <form action="https://formspree.io/f/mvglzbrj" method="POST" class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Message" required></textarea>
 
       <button type="submit">Send</button>
     </form>
+
   </section>
 
   <footer>
     <p>© 2025 RLI Technosoft</p>
   </footer>
-
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", async function(e) {
-      e.preventDefault();  // stop normal form submit
-      
-      const form = e.target;
-      const formData = new FormData(form);
-
-      // SEND DATA TO FORMSUBMIT
-      const response = await fetch("https://formsubmit.co/suvalamuni@gmail.com", {
-        method: "POST",
-        body: formData
-      });
-
-      if (response.ok) {
-        // POPUP MESSAGE
-        alert("Sent successfully! Thank you.");
-
-        // REDIRECT TO HOME PAGE
-        window.location.href = "https://suvalamuni.github.io/html/";
-      } else {
-        alert("Failed to send. Please try again!");
-      }
-    });
-  </script>
 
 </body>
 </html>
@@ -86,6 +53,7 @@ header {
   background: #002b5b; color: white; padding: 15px 40px;
   display: flex; justify-content: space-between; align-items: center;
 }
+.logo { font-size: 1.5em; font-weight: bold; }
 nav ul { list-style: none; display: flex; gap: 20px; }
 nav a { color: white; text-decoration: none; font-weight: 500; }
 nav a:hover, .active { color: #00aaff; }
@@ -96,7 +64,7 @@ nav a:hover, .active { color: #00aaff; }
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
